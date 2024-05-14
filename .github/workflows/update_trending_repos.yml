@@ -1,0 +1,32 @@
+name: Update Trending Repositories
+
+on:
+  schedule:
+    - cron: "0 0 * * *"  # Run the workflow every day at midnight
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run script to update trending repositories
+        run: python trending_repos.py
+
+      - name: Commit changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add trending_repos.md
+          git commit -m "Update trending repositories"
+      
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
