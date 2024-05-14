@@ -1,8 +1,7 @@
 name: Update Trending Repositories
 
 on:
-  schedule:
-    - cron: "0 0 * * *"  # Run the workflow every day at midnight
+  workflow_dispatch:  # Allow manual triggering
 
 jobs:
   update:
