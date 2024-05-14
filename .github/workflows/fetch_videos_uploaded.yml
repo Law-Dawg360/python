@@ -22,6 +22,7 @@ jobs:
     - name: Install dependencies
       run: |
         pip install --upgrade pip
+        pip install -r .github/dependencies/fetch_videos_uploaded.txt
 
     - name: Execute Python script
       run: python 1_YouTube/yt_Scripts/fetch_videos_uploaded.py
