@@ -17,7 +17,7 @@ def fetch_latest_videos():
     current_date = datetime.utcnow().strftime('%Y-%m-%dT00:00:00Z')
 
     # Read channel IDs from file
-    CHANNEL_IDS = read_channel_ids('channel_ids.txt')
+    CHANNEL_IDS = read_channel_ids('1_YouTube/info/channel_ids.txt')
 
     for channel_id in CHANNEL_IDS:
         try:
