@@ -22,6 +22,7 @@ jobs:
     - name: Install dependencies
       run: |
         pip install --upgrade pip
+        pip install -r .github/dependencies/fetch_channel_info.txt
         
     - name: Execute Python script
       run: python 1_YouTube/yt_Scripts/get_channel_info.py
