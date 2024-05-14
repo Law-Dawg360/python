@@ -13,7 +13,7 @@ def get_channel_info():
     youtube = build('youtube', 'v3', developerKey=API_KEY)
 
     # Read channel IDs from file
-    CHANNEL_IDS = read_channel_ids('channel_ids.txt')
+    CHANNEL_IDS = read_channel_ids('1_YouTube/info/channel_ids.txt')
 
     for channel_id in CHANNEL_IDS:
         try:
