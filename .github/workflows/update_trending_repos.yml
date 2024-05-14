@@ -15,8 +15,11 @@ jobs:
       - name: Install dependencies
         run: pip install requests
 
+      - name: Checkout repository
+        uses: actions/checkout@v2  # Ensure the repository is checked out
+
       - name: Run script to update trending repositories
-        run: python trending_repos.py
+        run: python ./.github/scripts/trending_repos.py  # Adjust path to the script
 
       - name: Commit changes
         run: |
