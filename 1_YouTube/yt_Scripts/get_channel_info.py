@@ -1,7 +1,7 @@
 from googleapiclient.discovery import build
 
 # Your API key
-API_KEY = "YOUR_API_KEY"
+API_KEY = os.environ['API_KEY']
 
 # Function to read channel IDs from file
 def read_channel_ids(filename):
