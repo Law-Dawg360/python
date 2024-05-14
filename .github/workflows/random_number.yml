@@ -1,4 +1,4 @@
-name: Python Script
+name: Run Random Number Generator
 
 on:
   push:
