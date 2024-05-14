@@ -25,4 +25,4 @@ jobs:
       run: pip install -r requirements.txt
 
     - name: Run Python script
-      run: python random_number.py
+      run: python ./.github/scripts/random_number.py
